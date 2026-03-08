@@ -1,32 +1,251 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>기초 인도네시아어 인사</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>기초 인도네시아어 인사</title>
+  <style>
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans KR","PingFang SC","Microsoft YaHei",sans-serif;
+      margin:0;
+      background:#f6f7fb;
+      color:#222;
+    }
+    .wrap{
+      max-width:900px;
+      margin:0 auto;
+      padding:24px 18px 60px;
+    }
+    h1{
+      font-size:34px;
+      margin:10px 0 8px;
+    }
+    .desc{
+      color:#666;
+      line-height:1.6;
+      margin-bottom:22px;
+    }
+    .card{
+      background:#fff;
+      border-radius:18px;
+      padding:18px;
+      margin-bottom:16px;
+      box-shadow:0 4px 14px rgba(0,0,0,0.06);
+      border:1px solid #ececf3;
+    }
+    .indo{
+      font-size:28px;
+      font-weight:800;
+      margin-bottom:14px;
+      color:#111;
+    }
+    .row{
+      margin:7px 0;
+      line-height:1.6;
+      font-size:17px;
+    }
+    .label{
+      display:inline-block;
+      min-width:92px;
+      font-weight:700;
+      color:#4b5563;
+    }
+    .btns{
+      margin-top:14px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    button{
+      border:none;
+      border-radius:12px;
+      padding:11px 15px;
+      font-size:15px;
+      font-weight:700;
+      cursor:pointer;
+    }
+    .play{
+      background:#2563eb;
+      color:#fff;
+    }
+    .slow{
+      background:#e5e7eb;
+      color:#111;
+    }
+    .tip{
+      margin-top:28px;
+      padding:16px;
+      border-radius:16px;
+      background:#fff8e8;
+      border:1px solid #f1dfb0;
+      color:#6b5520;
+      line-height:1.7;
+    }
+  </style>
 </head>
+<body>
+  <div class="wrap">
+    <h1>기초 인도네시아어 인사</h1>
+    <div class="desc">
+      인도네시아어 · 한글 발음 · 중국어 발음 · 뜻 · 듣기를 한 번에 볼 수 있는 초급 인사말 페이지
+    </div>
 
-<body style="font-family:sans-serif;padding:30px">
+    <div class="card">
+      <div class="indo">Halo</div>
+      <div class="row"><span class="label">한글 발음</span>할로</div>
+      <div class="row"><span class="label">中文发音</span>哈咯</div>
+      <div class="row"><span class="label">뜻</span>안녕</div>
+      <div class="btns">
+        <button class="play" onclick="speak('Halo', 0.9)">🔊 듣기</button>
+        <button class="slow" onclick="speak('Halo', 0.65)">🐢 천천히</button>
+      </div>
+    </div>
 
-<h1>기초 인도네시아어 인사</h1>
+    <div class="card">
+      <div class="indo">Apa kabar?</div>
+      <div class="row"><span class="label">한글 발음</span>아빠 까바르?</div>
+      <div class="row"><span class="label">中文发音</span>阿爸 卡巴尔？</div>
+      <div class="row"><span class="label">뜻</span>잘 지내세요? / 어떻게 지내요?</div>
+      <div class="btns">
+        <button class="play" onclick="speak('Apa kabar?', 0.9)">🔊 듣기</button>
+        <button class="slow" onclick="speak('Apa kabar?', 0.65)">🐢 천천히</button>
+      </div>
+    </div>
 
-<p><b>Halo</b> — 안녕</p>
-<button onclick="speak('Halo')">발음 듣기</button>
+    <div class="card">
+      <div class="indo">Baik. Dan Anda?</div>
+      <div class="row"><span class="label">한글 발음</span>바익. 단 안다?</div>
+      <div class="row"><span class="label">中文发音</span>巴伊克。丹 安达？</div>
+      <div class="row"><span class="label">뜻</span>좋아요. 당신은요?</div>
+      <div class="btns">
+        <button class="play" onclick="speak('Baik. Dan Anda?', 0.9)">🔊 듣기</button>
+        <button class="slow" onclick="speak('Baik. Dan Anda?', 0.65)">🐢 천천히</button>
+      </div>
+    </div>
 
-<p><b>Selamat pagi</b> — 좋은 아침</p>
-<button onclick="speak('Selamat pagi')">발음 듣기</button>
+    <div class="card">
+      <div class="indo">Selamat pagi</div>
+      <div class="row"><span class="label">한글 발음</span>슬라맛 빠기</div>
+      <div class="row"><span class="label">中文发音</span>瑟拉玛特 巴吉</div>
+      <div class="row"><span class="label">뜻</span>좋은 아침입니다</div>
+      <div class="btns">
+        <button class="play" onclick="speak('Selamat pagi', 0.9)">🔊 듣기</button>
+        <button class="slow" onclick="speak('Selamat pagi', 0.65)">🐢 천천히</button>
+      </div>
+    </div>
 
-<p><b>Terima kasih</b> — 감사합니다</p>
-<button onclick="speak('Terima kasih')">발음 듣기</button>
+    <div class="card">
+      <div class="indo">Selamat siang</div>
+      <div class="row"><span class="label">한글 발음</span>슬라맛 씨앙</div>
+      <div class="row"><span class="label">中文发音</span>瑟拉玛特 西昂</div>
+      <div class="row"><span class="label">뜻</span>안녕하세요 / 좋은 낮입니다</div>
+      <div class="btns">
+        <button class="play" onclick="speak('Selamat siang', 0.9)">🔊 듣기</button>
+        <button class="slow" onclick="speak('Selamat siang', 0.65)">🐢 천천히</button>
+      </div>
+    </div>
 
-<script>
-function speak(text){
-const speech = new SpeechSynthesisUtterance(text);
-speech.lang = "id-ID";
-speech.rate = 0.9;
-speechSynthesis.speak(speech);
-}
-</script>
+    <div class="card">
+      <div class="indo">Selamat sore</div>
+      <div class="row"><span class="label">한글 발음</span>슬라맛 소레</div>
+      <div class="row"><span class="label">中文发音</span>瑟拉玛特 索类</div>
+      <div class="row"><span class="label">뜻</span>좋은 오후입니다</div>
+      <div class="btns">
+        <button class="play" onclick="speak('Selamat sore', 0.9)">🔊 듣기</button>
+        <button class="slow" onclick="speak('Selamat sore', 0.65)">🐢 천천히</button>
+      </div>
+    </div>
 
+    <div class="card">
+      <div class="indo">Selamat malam</div>
+      <div class="row"><span class="label">한글 발음</span>슬라맛 말람</div>
+      <div class="row"><span class="label">中文发音</span>瑟拉玛特 马朗</div>
+      <div class="row"><span class="label">뜻</span>좋은 저녁입니다 / 안녕하세요(밤)</div>
+      <div class="btns">
+        <button class="play" onclick="speak('Selamat malam', 0.9)">🔊 듣기</button>
+        <button class="slow" onclick="speak('Selamat malam', 0.65)">🐢 천천히</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="indo">Terima kasih</div>
+      <div class="row"><span class="label">한글 발음</span>뜨리마 까시</div>
+      <div class="row"><span class="label">中文发音</span>特里玛 卡西</div>
+      <div class="row"><span class="label">뜻</span>감사합니다</div>
+      <div class="btns">
+        <button class="play" onclick="speak('Terima kasih', 0.9)">🔊 듣기</button>
+        <button class="slow" onclick="speak('Terima kasih', 0.65)">🐢 천천히</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="indo">Sama-sama</div>
+      <div class="row"><span class="label">한글 발음</span>사마 사마</div>
+      <div class="row"><span class="label">中文发音</span>萨玛 萨玛</div>
+      <div class="row"><span class="label">뜻</span>천만에요 / 별말씀을요</div>
+      <div class="btns">
+        <button class="play" onclick="speak('Sama-sama', 0.9)">🔊 듣기</button>
+        <button class="slow" onclick="speak('Sama-sama', 0.65)">🐢 천천히</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="indo">Senang bertemu dengan Anda</div>
+      <div class="row"><span class="label">한글 발음</span>스낭 버르뜨무 등안 안다</div>
+      <div class="row"><span class="label">中文发音</span>瑟囊 贝尔特姆 德甘 安达</div>
+      <div class="row"><span class="label">뜻</span>만나서 반갑습니다</div>
+      <div class="btns">
+        <button class="play" onclick="speak('Senang bertemu dengan Anda', 0.9)">🔊 듣기</button>
+        <button class="slow" onclick="speak('Senang bertemu dengan Anda', 0.65)">🐢 천천히</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="indo">Sampai jumpa</div>
+      <div class="row"><span class="label">한글 발음</span>삼빠이 줌빠</div>
+      <div class="row"><span class="label">中文发音</span>桑派 琼巴</div>
+      <div class="row"><span class="label">뜻</span>또 만나요 / 안녕히 가세요</div>
+      <div class="btns">
+        <button class="play" onclick="speak('Sampai jumpa', 0.9)">🔊 듣기</button>
+        <button class="slow" onclick="speak('Sampai jumpa', 0.65)">🐢 천천히</button>
+      </div>
+    </div>
+
+    <div class="tip">
+      음성은 기기의 브라우저 TTS를 사용합니다.  
+      아이폰에서는 처음 누를 때 약간 늦게 재생될 수 있습니다.
+    </div>
+  </div>
+
+  <script>
+    function getVoice() {
+      const voices = speechSynthesis.getVoices();
+      return voices.find(v => v.lang && v.lang.toLowerCase().startsWith('id')) ||
+             voices.find(v => v.lang && v.lang.toLowerCase().startsWith('ms')) ||
+             voices.find(v => v.lang && v.lang.toLowerCase().startsWith('en'));
+    }
+
+    function speak(text, rate) {
+      if (!('speechSynthesis' in window)) {
+        alert('이 브라우저는 음성 재생을 지원하지 않습니다.');
+        return;
+      }
+      speechSynthesis.cancel();
+      const utter = new SpeechSynthesisUtterance(text);
+      const voice = getVoice();
+      if (voice) utter.voice = voice;
+      utter.lang = voice?.lang || 'id-ID';
+      utter.rate = rate || 0.9;
+      utter.pitch = 1;
+      speechSynthesis.speak(utter);
+    }
+
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.onvoiceschanged = () => {};
+      window.addEventListener('load', () => {
+        window.speechSynthesis.getVoices();
+      });
+    }
+  </script>
 </body>
 </html>
