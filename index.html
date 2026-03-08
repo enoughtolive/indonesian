@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>기초 인도네시아어 인사</title>
+</head>
+
+<body style="font-family:sans-serif;padding:30px">
+
+<h1>기초 인도네시아어 인사</h1>
+
+<p><b>Halo</b> — 안녕</p>
+<button onclick="speak('Halo')">발음 듣기</button>
+
+<p><b>Selamat pagi</b> — 좋은 아침</p>
+<button onclick="speak('Selamat pagi')">발음 듣기</button>
+
+<p><b>Terima kasih</b> — 감사합니다</p>
+<button onclick="speak('Terima kasih')">발음 듣기</button>
+
+<script>
+function speak(text){
+const speech = new SpeechSynthesisUtterance(text);
+speech.lang = "id-ID";
+speech.rate = 0.9;
+speechSynthesis.speak(speech);
+}
+</script>
+
+</body>
+</html>
